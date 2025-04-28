@@ -13,10 +13,10 @@ class ProductPage(BasePage):
         sleep(5)
         expected = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME)
         result = self.browser.find_element(*ProductPageLocators.ADDED_NAME)
-        return expected.text==result.text
+        assert expected.text==result.text
 
     def check_success_msg_is_not_present(self):
-        return self.is_not_element_present(*ProductPageLocators.ADDED_NAME)
+        assert self.is_not_element_present(*ProductPageLocators.ADDED_NAME)
 
     def check_success_msg_dissapeared(self):
-        return self.is_disappeared(*ProductPageLocators.ADDED_NAME)
+        assert self.is_disappeared(*ProductPageLocators.ADDED_NAME)
