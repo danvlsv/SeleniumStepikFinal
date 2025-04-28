@@ -17,3 +17,8 @@ class ProductPageLocators():
     ADD_BTN = (By.CSS_SELECTOR,".btn-add-to-basket")
     PRODUCT_NAME = (By.CSS_SELECTOR,'.product_main h1')
     ADDED_NAME=(By.CSS_SELECTOR,"#messages .alert:first-of-type strong")
+
+class BasketLocators():
+    BASKET_BTN = (By.CSS_SELECTOR,"span.btn-group a")
+    BASKET_FORM = (By.CSS_SELECTOR,"#basket_formset")
+    EMPTY_BASKET_MSG = (By.CSS_SELECTOR,"div#content_inner > p")
